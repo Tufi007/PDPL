@@ -1,0 +1,44 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+:root{
+    --color-text-primary:#4b5563;
+    --color-text-secondary:#ffffff;
+    --color-background: #f5f5f5;
+    --color-sidebar: #f3f4f6;
+    --color-button-primary:#2563eb;
+    --color-button-light:#eff6ff;
+   
+}
+.theme-black{
+    --color-text-primary:#4b5563;
+    --color-text-secondary:#ffffff;
+    --color-background: #f5f5f5;
+    --color-sidebar: #f3f4f6;
+    --color-button-primary:#2563eb;
+    --color-button-light:#eff6ff;
+}
+.theme-purple{
+    --color-text-primary:#4b5563;
+    --color-text-secondary:#ffffff;
+    --color-background: #f5f5f5;
+    --color-sidebar: #f3f4f6;
+    --color-button-primary:#2563eb;
+    --color-button-light:#eff6ff;
+}
+.theme-orange{
+    --color-text-primary:#4b5563;
+    --color-text-secondary:#ffffff;
+    --color-background: #f5f5f5;
+    --color-sidebar: #f3f4f6;
+    --color-button-primary:#2563eb;
+    --color-button-light:#eff6ff;
+}
+.theme-green{
+    --color-text-primary:#4b5563;
+    --color-text-secondary:#ffffff;
+    --color-background: #f5f5f5;
+    --color-sidebar: #f3f4f6;
+    --color-button-primary:#2563eb;
+    --color-button-light:#eff6ff;
+}
