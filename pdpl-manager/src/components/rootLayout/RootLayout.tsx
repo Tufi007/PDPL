@@ -1,8 +1,20 @@
-import { Link, Outlet } from "react-router-dom";
+import { Link, Outlet, useNavigate } from "react-router-dom";
 import Sidebar from "../sideBarLayout/SideBar";
 import { User } from "lucide-react";
+import { useEffect } from "react";
 
 function RootLayout() {
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    const authToken = localStorage.getItem("token");
+
+    if (!authToken) {
+      // If token is not found, redirect to login
+      navigate("/auth/login");
+    }
+  }, [navigate]); // Dependency array ensures `useNavigate` is updated correctly
+
   return (
     <div className="flex min-h-screen bg-gray-background w-full">
       <Sidebar />
@@ -12,16 +24,16 @@ function RootLayout() {
             Organization
           </button>
         </Link>
-        <Link to={"/auth/login"}>
+        {/* <Link to={"/auth/login"}>
           <button className="bg-[#2563eb] text-white px-2 py-2 rounded-md">
             Login 
           </button>
-        </Link>
-        <Link to={"/auth/signup"}>
+        </Link> */}
+        {/* <Link to={"/auth/signup"}>
           <button className="bg-[#2563eb] text-white px-2 py-2 rounded-md">
             SignUp
           </button>
-        </Link>
+        </Link> */}
         <Link to={""}>
           <button className="bg-[#2563eb] text-white px-2 py-2 rounded-md">
             <User className="mr-3" size={15} ></User>
@@ -29,7 +41,7 @@ function RootLayout() {
         </Link>
         <Link to={""}>
           <button className="bg-[#2563eb] text-white px-2 py-2 rounded-md">
-            Change Theme
+            Theme
           </button>
         </Link>
       </div>

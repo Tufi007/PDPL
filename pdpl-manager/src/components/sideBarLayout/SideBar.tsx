@@ -6,11 +6,11 @@ import {
 
 const navItems = [
   { path: '/', icon: LayoutDashboard, label: 'Dashboard' },
-  { path: '/organization', icon: Building2, label: 'Organization' },
+  // { path: '/organization', icon: Building2, label: 'Organization' },
   { path: '/teams', icon: Users, label: 'Teams' },
   { path: '/consent', icon: FileText, label: 'Consent Management' },
   { path: '/data', icon: Database, label: 'Data Collection' },
-  { path: '/guardians', icon: Shield, label: 'Legal Guardians' },
+  { path: '/purposes', icon: Shield, label: 'Purposes' },
   { path: '/audit', icon: FileDigit, label: 'Audit Logs' },
 ];
 

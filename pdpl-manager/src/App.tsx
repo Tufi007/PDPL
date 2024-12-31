@@ -9,11 +9,15 @@ import Organization from './components/organizationLayout/Organization';
 import Teams from './components/teamsLayout/Teams';
 import ConsentManagement from './components/consentManagement/ConsentManagement';
 import DataCollection from './components/dataCollectionLayout/DataCollection';
-import LegalGuardians from './components/legalGaurdiansLayout/LegalGuardians';
 import AuditLogs from './components/auditLogs/AuditLogs';
+import PurposesAndField from './components/purposes/purposesAndFeild'
 import Auth from './components/authLayout/Auth';
 import Login from './components/authLayout/Login';
 import Signup from './components/authLayout/Signup';
+import { Provider } from 'react-redux';
+import { store } from './store/store';
+import ManageTeamOutlet from './components/teamsLayout/manageTeam';
+import CreateTemplateForm from './components/consentManagement/CreateTemplateForm';
 
 const router = createBrowserRouter([
   {
@@ -42,12 +46,20 @@ const router = createBrowserRouter([
         element: <DataCollection />
       },
       {
-        path: "guardians",
-        element: <LegalGuardians />
+        path: "purposes",
+        element: <PurposesAndField/>
       },
       {
         path: "audit",
         element: <AuditLogs />
+      },
+      {
+        path: "manageTeam/:id",
+        element: <ManageTeamOutlet />
+      },
+      {
+        path: "createTemplateForm",
+        element: <CreateTemplateForm/>
       }
     ]
   },
@@ -68,7 +80,7 @@ const router = createBrowserRouter([
 ]);
 
 function App() {
-  return <RouterProvider router={router} />;
+  return < Provider store={store}  ><RouterProvider router={router} /></Provider>;
 }
 
 export default App;
